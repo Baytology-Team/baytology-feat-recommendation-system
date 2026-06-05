@@ -20,7 +20,7 @@ sys.path.append(PROJECT_ROOT)
 
 # 2. LOAD DATA
 try:
-    from Data_preprocessing import df_encoded
+    from data_preprocessing import df_encoded
     print("✅ Project modules loaded successfully.")
 except ImportError:
     print("❌ Critical: Data_preprocessing not found.")
