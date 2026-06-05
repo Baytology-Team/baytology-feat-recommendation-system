@@ -25,19 +25,26 @@ data handling, model logic, evaluation, and API services.
 ```text
 Baytology/
 ├── Datasets/
-│   ├── egypt_real_estate_listings.csv   # Raw real estate data (external source)
-│   ├── master_dataset.csv               # Cleaned dataset for API responses
-│   └── preprocessed_dataset.csv         # Encoded & normalized data for model training
+│   ├── egypt_real_estate_listings.csv   # Raw real estate dataset collected from external sources
+│   ├── master_dataset.csv               # Cleaned dataset used for API responses
+│   └── preprocessed_dataset.csv         # Encoded and normalized dataset used for model training
+│
+├── Experiments/
+│   ├── EDA.py                           # Initial prototype of Data_preprocessing.py developed from notebook experiments
+│   └── egyptian-real-estate-listings.ipynb  # Exploratory Data Analysis (EDA) and data preparation experiments
+│
 ├── Model/
 │   ├── tests/
-│   │   └── test_latency.py              # Latency & throughput benchmarks
-│   ├── Model_training.py                # Builds the FAISS index
-│   └── Model_evaluation.py              # Computes Recall@K metrics
-├── app.py                               # FastAPI recommendation service
-├── Data_preprocessing.py                # ETL, cleaning & feature engineering
-├── main.py                              # End-to-end orchestration pipeline
-├── faiss_index.bin                      # Trained FAISS ANN model
-└── requirements.txt                     # Python dependencies
+│   │   └── test_latency.py              # Latency and throughput benchmark tests
+│   ├── Model_training.py                # Trains the recommendation model and builds the FAISS index
+│   └── Model_evaluation.py              # Evaluates recommendation quality using Recall@K
+│
+├── Data_preprocessing.py                # Data cleaning, transformation, and feature engineering pipeline
+├── check_requirements_versions.py       # Verifies installed package versions against requirements
+├── fast_api_app.py                      # FastAPI-based recommendation service
+├── main.py                              # End-to-end pipeline orchestration
+├── faiss_index.bin                      # Serialized FAISS index generated after model training
+└── requirements.txt                     # Project dependencies
 ```
 ---
 
